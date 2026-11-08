@@ -4,7 +4,7 @@ import {
   PenLine,
   ChevronLeft,
   ChevronRight,
-  Database,
+  DatabaseBackup,
   Info,
   Keyboard,
   KeyRound,
@@ -43,6 +43,7 @@ import { AiSpaceShortcutSettingsItem } from "./settings/AiSpaceShortcutSettingsI
 import { PreferenceCard } from "./settings/PreferenceCard";
 import { ShortcutSettingsItem } from "./settings/ShortcutSettingsItem";
 import { PasswordCard } from "./settings/PasswordCard";
+import { TwoFactorCard } from "./settings/TwoFactorCard";
 import { UserManagementCard } from "./settings/UserManagementCard";
 import { ObjectStorageCard } from "./settings/ObjectStorageCard";
 import { AiModelCard } from "./settings/AiModelCard";
@@ -166,7 +167,7 @@ export const SettingsPane = ({
     {
       key: "data",
       label: t("settings.tabs.data"),
-      icon: Database,
+      icon: DatabaseBackup,
     },
     {
       key: "sharing",
@@ -329,6 +330,7 @@ export const SettingsPane = ({
           <SettingsGroup>
             <AccountInfoCard user={user} />
             <PasswordCard authRequired={authRequired} demoMode={demoMode} />
+            {demoMode ? null : <TwoFactorCard authRequired={authRequired} />}
             {demoMode ? null : (
               <LoginDevicesCard
                 authRequired={authRequired}

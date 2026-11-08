@@ -1,23 +1,20 @@
 {
-  "version": "2.19.0",
+  "version": "2.23.0",
   "changes": {
     "en-US": [
-      "Set note body spacing and alignment independently, and find custom CSS directly in the reorganized reading preferences. Numbered pill headings now match the body text size.",
-      "Desktop apps recheck for newer versions before installing a pending update, reducing repeated upgrades through intermediate versions (#776).",
-      "Editor focus mode enters browser fullscreen, and the AI assistant button aligns with the note outline.",
-      "Backup and migration settings make scheduled backup status and import options easier to find."
+      "MCP now returns only Markdown for prose note bodies by default in get_memo and full-content list_memos. If your integration uses contentJson or contentText, pass format=\"all\" to keep the previous fields.",
+      "MCP keyword search includes a snippet of up to 200 characters around a body match when available.",
+      "The initial HTML for publicly shared notes leaves the note language unspecified and labels the built-in English text correctly. Thanks to @dkoryto in #816."
     ],
     "zh-CN": [
-      "独立设置笔记正文的间距和对齐方式，在重新分组的阅读偏好中直接找到自定义 CSS。数字胶囊标题现在与正文文字大小一致。",
-      "桌面端安装待处理更新前会重新检查是否有更新版本，减少经过中间版本的重复升级（#776）。",
-      "编辑器专注模式会进入浏览器全屏，AI 助手入口与笔记大纲内容对齐。",
-      "调整备份和迁移设置的布局，更容易找到定时备份状态和导入选项。"
+      "MCP 的 get_memo 和返回完整正文的 list_memos 现在默认只提供 Markdown 正文。依赖 contentJson 或 contentText 的集成可传入 format=\"all\"，继续获取原有字段。",
+      "MCP 关键词搜索命中笔记正文时，会附带最多 200 字的匹配片段。",
+      "公开分享页的初始 HTML 现在将笔记标题和正文的语言标记为未知，并正确标注页面自带的英文文案。感谢 @dkoryto 的 #816。"
     ],
     "ja": [
-      "ノート本文の間隔と配置を個別に設定でき、整理された閲覧設定からカスタムCSSを直接開けます。番号付き見出しの文字サイズも本文と揃えました。",
-      "デスクトップアプリは更新のインストール前に最新版を確認し、中間バージョンを経由する更新を減らします。",
-      "エディターの集中モードでブラウザーが全画面表示になり、AIアシスタントボタンの位置が目次に揃います。",
-      "バックアップと移行の設定を整理し、定期バックアップの状態とインポート項目を見つけやすくしました。"
+      "MCP の get_memo と本文を含む list_memos は、標準のノート本文を既定で Markdown のみ返します。contentJson や contentText が必要な場合は format=\"all\" を指定してください。",
+      "MCP のキーワード検索では、本文に一致箇所がある場合に最大 200 文字の抜粋を返します。",
+      "公開共有ページの初期 HTML で、ノートの言語は未指定とし、組み込みの英語テキストには正しい言語を設定します。"
     ]
   }
 }
